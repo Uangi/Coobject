@@ -23,8 +23,8 @@ public class View {
         this.studentModel = studentModel;
     }
 	public void busincomeMessage() {
-        int busIncome = studentModel.getBusIncome();
-        System.out.println("수입은 : "+ busIncome);
+        int busIncomeSum = studentModel.getBusIncome();
+        System.out.println("수입은 : "+ busIncomeSum);
     }
 	
 	public void passCount() {
