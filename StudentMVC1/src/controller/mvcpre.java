@@ -12,7 +12,7 @@ public class mvcpre {
 		class CalculatorModel {
 		    private double operand1;
 		    private double operand2;
-		    private double result;
+		    private double result; 
 
 		    public double getOperand1() {
 		        return operand1;
