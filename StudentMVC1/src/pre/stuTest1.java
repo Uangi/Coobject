@@ -50,13 +50,20 @@ public class stuTest1 {
 	}
 	public static void run() {
 		int ch = 0;
-		do {
 		stuTest1 t1 =  new stuTest1();
 		busTest1 t2 =  new busTest1();
-		
 		t1.takeBus(t2);
 		t1.stuInfo(t2);
 		t2.busInfo(t2);
+		do {
+		
+		
+		
+		
+		busTest1 t2_2 =  new busTest1();
+		t1.takeBus(t2);
+		t2.busInfo(t2);
+		
 		ch++;
 		} while(ch < 3);
 	}
