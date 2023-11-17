@@ -1,7 +1,7 @@
 package controller;
 
 public class mvcpre {
-	package com.day2;
+	package pre;
 
 	import java.util.Scanner;
 

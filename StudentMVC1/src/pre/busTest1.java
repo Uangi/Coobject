@@ -3,7 +3,7 @@ package pre;
 import java.util.Scanner;
 
 public class busTest1 {
-	private final int bCost;
+	private int bCost;
 	private int busPassenger;
 	private int income;
 	
@@ -16,7 +16,7 @@ public class busTest1 {
 		System.out.println("요금을 입력해주세요.");
 		this.bCost = sc2.nextInt();
 		this.busPassenger = busPassenger;  // = 0;
-		this.income = income; // = 0;
+		this.income += getbCost(); // = 0;
 	}
 	
 	public int getIncome() {
@@ -32,11 +32,19 @@ public class busTest1 {
 		return busPassenger;
 	}
 
-	public void take(int income) {	// public void take(int income)
-		this.income += bCost;		// this.income += bCost;
-		busPassenger++;							// busPassenger++;
+//	public void take(int income) {	// public void take(int income)
+//		this.income += this.bCost;		// this.income += bCost;
+//		//busPassenger++;							// busPassenger++;
+//	}
+	
+	public int busMoney() {
+		this.income += getbCost();
+		return income;
 	}
 	
+	public void busPass() {	// 승객 수
+		busPassenger++;
+	}
 	public void busInfo(busTest1 tb) {
 		System.out.println("버스요금 : " + tb.getbCost() + ", 승객 수 : " + tb.getBusPassenger() + " 명 " + ", 수입은 : " + tb.getIncome() );
 	}

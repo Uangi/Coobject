@@ -1,11 +1,11 @@
 package model;
-
+import controller.Controller;
 public class StudentModel {
 
 	private  String name = "박진영";
 	private  int grade = 3;
 	private  int money = 5000;	// 잔액
-	private  int buscost;	
+	private  int buscost;
 	private int busincome;
 	private int buspassenger;
 	
@@ -45,9 +45,6 @@ public class StudentModel {
 	public void setBusPassenger(int busPassenger) {
 		this.buspassenger = busPassenger;
 	}
-	//public void setBusPassenger(int busPassenger) {
-	///	this.buspassenger = busPassenger;
-	//}
 	
 	// 계산 로직
 	public void takeBus() {	// 잔액 차감
