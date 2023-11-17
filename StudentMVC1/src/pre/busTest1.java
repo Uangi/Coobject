@@ -3,40 +3,38 @@ package pre;
 import java.util.Scanner;
 
 public class busTest1 {
-	private int bCost;
-	public int busPassenger;
+	private final int bCost;
+	private int busPassenger;
+	private int income;
+	
 	public int getbCost() {
 		return bCost;
 	}
 
-	private int income;
-	
-
-	public busTest1(int bCost, int busPassenger, int income) {	// 수입의 메소드
-		this.bCost = bCost;	// 버스 요금
-		this.busPassenger = busPassenger;
-		this.income = income;
+	public busTest1() {	// 수입의 메소드
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("요금을 입력해주세요.");
+		this.bCost = sc2.nextInt();
+		this.busPassenger = busPassenger;  // = 0;
+		this.income = income; // = 0;
 	}
 	
 	public int getIncome() {
 		return income;
 	}
 
-	public busTest1() {
-		Scanner sc2 = new Scanner(System.in);
-		System.out.println("요금을 입력해주세요.");
-		this.bCost = sc2.nextInt();
-		this.busPassenger = 0;
-		this.income = 0;
+	
+	public int getBusPassenger() {
+		return busPassenger;
+	}
+
+	public void take(int income) {	// public void take(int income)
+		this.income += bCost;		// this.income += bCost;
+		busPassenger++;							// busPassenger++;
 	}
 	
-	public void take(int income) {
-		this.income += bCost;
-		busPassenger++;
-	}
-	
-	public void busInfo() {
-		System.out.println("버스요금 : " + bCost + ", 승객 수 : " + busPassenger + " 명 " + ", 수입은 : " + income );
+	public void busInfo(busTest1 tb) {
+		System.out.println("버스요금 : " + tb.getbCost() + ", 승객 수 : " + tb.getBusPassenger() + " 명 " + ", 수입은 : " + tb.getIncome() );
 	}
 }
 //////////////두번째 클래스

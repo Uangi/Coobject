@@ -2,7 +2,6 @@ package controller;
 
 import java.util.Scanner;
 
-import model.Bus;
 
 import model.StudentModel;
 import view.View;
@@ -17,7 +16,7 @@ public class Controller {
 	private StudentModel StudentModel;
 	
 	public Controller(StudentModel model, View view) {
-		this.StudentModel = model;
+		this.model = model;
 		this.view = view;
 		
 	}
@@ -30,15 +29,18 @@ public class Controller {
 		model.setBusIncome(busincome);
 	}
 	
+	public void setbusCost(int buscost){
+		model.setBusCost(buscost);
+	}
 	
 	public void performTake() {	//  버스탑승
 		model.takeBus();
-		view.busincomeMessage(model.getBusIncome());
+		view.busincomeMessage();
 	}
 	
 	public void performCount() {
 		model.passengerCount();
-		view.passCount(model.getBusPassenger());
+		view.passCount();
 	}
 	
 	public void performbusIncomeSum() {
