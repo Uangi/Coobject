@@ -39,3 +39,4 @@ public class busTest1 {
 		System.out.println("버스요금 : " + bCost + ", 승객 수 : " + busPassenger + " 명 " + ", 수입은 : " + income );
 	}
 }
+//////////////두번째 클래스

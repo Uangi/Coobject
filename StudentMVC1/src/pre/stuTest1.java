@@ -22,7 +22,7 @@ public class stuTest1 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("잔액을 입력하세요 : ");
 		this.money = sc.nextInt();
-		//sc.nextLine();	// 개행문자처리
+		sc.nextLine();	// 개행문자처리
 		this.stuName = "박진영";
 		this.grade = 3;
 	}
@@ -51,4 +51,17 @@ public class stuTest1 {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
 				getGrade() + ", 현재 돈 :" + getMoney());
 	}
+	public static void run() {
+		int ch = 0;
+		do {
+		stuTest1 t1 =  new stuTest1();
+		busTest1 t2 =  new busTest1();
+		
+		t1.takeBus(t2);
+		t1.stuInfo();
+		t2.busInfo();
+		ch++;
+		} while(ch < 3);
+	}
 }
+//////////첫번째 클래스
