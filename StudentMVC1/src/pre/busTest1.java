@@ -7,9 +7,9 @@ public class busTest1 {
 	private int busPassenger;
 	private int income;
 	
-	public int getbCost() {
-		return bCost;
-	}
+//	public int getbCost() {
+//		return bCost;
+//	}
 
 	public busTest1() {	// 수입의 메소드
 		Scanner sc2 = new Scanner(System.in);
@@ -24,6 +24,10 @@ public class busTest1 {
 	}
 
 	
+	public int getbCost() {
+		return bCost;
+	}
+
 	public int getBusPassenger() {
 		return busPassenger;
 	}
