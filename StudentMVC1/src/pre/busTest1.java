@@ -15,10 +15,10 @@ public class busTest1 {
 		Scanner sc2 = new Scanner(System.in);
 		System.out.println("요금을 입력해주세요.");
 		this.bCost = sc2.nextInt();
-		this.busPassenger = busPassenger;  // = 0;
-		this.income = income; // = 0;
+		this.busPassenger = getBusPassenger();  // = 0;
+		this.income = getIncome(); // = 0;
 	}
-	
+	// tb.getbCost() 고정, tb.getIncome()은 잘 읽는 대신
 	public int getIncome() {
 		return income;
 	}
@@ -32,9 +32,10 @@ public class busTest1 {
 		return busPassenger;
 	}
 
-	public void take(int income) {	// public void take(int income)
+	public int take(int income) {	// public void take(int income)
 		this.income += bCost;		// this.income += bCost;
-		busPassenger++;							// busPassenger++;
+		busPassenger++;
+		return getIncome();						// busPassenger++;
 	}
 	
 	public void busInfo(busTest1 tb) {
