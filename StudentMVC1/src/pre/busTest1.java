@@ -23,7 +23,7 @@ public class busTest1 {
 		return income;
 	}
 
-	
+	// 연동 테스트 22
 	public int getbCost() {
 		return bCost;
 	}
