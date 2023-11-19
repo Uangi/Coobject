@@ -38,11 +38,13 @@ public class stuTest1 {
 	public void setMoney(int money) {
 		this.money = money;
 	}
+	
 	public void takeBus(busTest1 tb) {
-		tb.take(tb.getIncome());	// 버스 요금 1000원
-		this.money -= tb.getbCost();
+		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지
+		// 총 2번 호출이 되기 때문에 사용 x
+		//this.money -= tb.getbCost();
 		//tb.take(tb.busPassenger);
-		
+		tb.getBusPassenger();
 	}
 	public void stuInfo(busTest1 tb) {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
@@ -52,16 +54,14 @@ public class stuTest1 {
 		int ch = 0;
 		stuTest1 t1 =  new stuTest1();
 		busTest1 t2 =  new busTest1();
-		t1.takeBus(t2);
 		t1.stuInfo(t2);
+		t1.takeBus(t2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+		
 		t2.busInfo(t2);
 		do {
 		
-		
-		
-		
 		busTest1 t2_2 =  new busTest1();
-		t1.takeBus(t2);
+		t1.takeBus(t2);	// 여기서 원래값
 		t2.busInfo(t2);
 		
 		ch++;
