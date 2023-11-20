@@ -38,35 +38,34 @@ public class stuTest1 {
 	public void setMoney(int money) {
 		this.money = money;
 	}
+	
 	public void takeBus(busTest1 tb) {
-		//tb.take(tb.getIncome());	// 버스 요금이 고정되어서 잔액이랑 수입에 고정적으로 박힘
-		this.money -= tb.getbCost();	
-		//tb.getIncome() += tb.bCost;	// 함수가 아닌걸 데려오려면 
-		tb.busMoney();	// 인컴만 데려오면 됨. 인컴 += tb.bCost
-		tb.busPass();
+		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지
+		// 총 2번 호출이 되기 때문에 사용 x
+		//this.money -= tb.getbCost();
 		//tb.take(tb.busPassenger);
-		
+		tb.getBusPassenger();
 	}
 	public void stuInfo(busTest1 tb) {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
 				getGrade() + ", 현재 돈 :" + getMoney());
 	}
 	public static void run() {
-		//int ch = 0;
+		int ch = 0;
 		stuTest1 t1 =  new stuTest1();
 		busTest1 t2 =  new busTest1();
-		t1.takeBus(t2);
 		t1.stuInfo(t2);
+		t1.takeBus(t2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+		
 		t2.busInfo(t2);
-		//do {
+		do {
 		
 		busTest1 t2_2 =  new busTest1();
-		t1.takeBus(t2);
-		//t1.stuInfo(t2);
+		t1.takeBus(t2);	// 여기서 원래값
 		t2.busInfo(t2);
 		
-		//ch++;
-		//} while(ch < 3);
+		ch++;
+		} while(ch < 3);
 	}
 }
 //////////첫번째 클래스
