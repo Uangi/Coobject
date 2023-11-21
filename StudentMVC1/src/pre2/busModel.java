@@ -1,8 +1,8 @@
-package pre;
+package pre2;
 
 import java.util.Scanner;
 
-public class busTest2 {
+public class busModel {
 	private int bCost;
 	private int busPassenger;
 	private int income;
@@ -10,7 +10,7 @@ public class busTest2 {
 	private int resultmoney;
 	private boolean isFirstExecution = true;
 
-	public busTest2() {	// 수입의 메소드
+	public busModel() {	// 수입의 메소드
 		this.busPassenger = getBusPassenger();  // = 0;
 		this.income = getIncome(); // = 0
 		this.firstmoney = getFirstmoney();
@@ -56,7 +56,7 @@ public class busTest2 {
 		busPassenger++;
 	}
 	
-	public void busInfo(busTest2 tb) {
+	public void busInfo(busModel tb) {
 		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 "
 		+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
 		tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
