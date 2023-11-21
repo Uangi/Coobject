@@ -13,7 +13,7 @@ public class stuTest1 {
 	 * 필요가 없음. 결국 main 에서 getMoney로 값을 읽어올 순 있지만 setMoney로 변경이 안되서 사용안함. final을 사용하지
 	 * 않고 private만 걸어두고 입력받는 방법은 생성자 2에서 스캐너 객체 만들고 this.?? = sc.nextInt(); 이렇게하면 됨
 	 */
-	public stuTest1() { // 생성자 
+	public stuTest1(int money) { // 생성자 
 		this.stuName = "박진영";
 		this.grade = 3;
 		this.money = 10000;
@@ -49,7 +49,7 @@ public class stuTest1 {
 	}
 	public static void run() {
 		int ch = 0;
-		stuTest1 t1 =  new stuTest1();
+		stuTest1 t1 =  new stuTest1(10000);
 		busTest1 t2 =  new busTest1();
 		t1.stuInfo(t2);
 		t1.takeBus(t2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income

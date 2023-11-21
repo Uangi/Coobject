@@ -7,6 +7,7 @@ public class busTest1 {
 	private int busPassenger;
 	private int income;
 	private int resultmoney;
+	private int resultmoney2;
 //	public int getbCost() {
 //		return bCost;
 //	}
@@ -15,6 +16,7 @@ public class busTest1 {
 		this.busPassenger = getBusPassenger();  // = 0;
 		this.income = getIncome(); // = 0
 		this.resultmoney = getResultmoney();
+		this.resultmoney = getResultmoney2();
 	}
 	// tb.getbCost(), tb.getIncome() 고정 
 	public int getIncome() {
@@ -35,10 +37,22 @@ public class busTest1 {
 	}
 
 	public int getResultmoney() {
-		resultmoney = 10000 - bCost;
+		updateResultmoney(); // 초기값 반환
 		return resultmoney;
 	}
 	
+	public int getResultmoney2() {	// 이후의 잔
+		if(resultmoney == 10000) {
+		this.resultmoney2 = resultmoney - bCost;
+		}
+		this.resultmoney2 -= bCost;
+		
+		return this.resultmoney2;
+	}
+	
+	public void updateResultmoney() {
+		resultmoney = 10000 - bCost; // 첫 계산 후 초기 잔액값
+		}
 	public void take() {	// public void take(int income)
 		busPassenger++;
 								// return getIncome();
@@ -51,7 +65,7 @@ public class busTest1 {
 	
 	public void busInfo(busTest1 tb) {
 		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 "
-	+ ", 수입은 : " + tb.getIncome() + ", 잔액은 : " + tb.getResultmoney());
+	+ ", 수입은 : " + tb.getIncome() + ", 잔액은 : " + tb.getResultmoney2());
 	}
 	
 }
