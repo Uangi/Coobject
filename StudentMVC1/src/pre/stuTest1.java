@@ -16,12 +16,6 @@ public class stuTest1 {
 	public stuTest1(int money) { // 생성자 
 		this.stuName = "박진영";
 		this.grade = 3;
-		
-		Scanner sc = new Scanner(System.in);
-		//System.out.println("잔액을 입력하세요 : ");
-		//this.money = sc.nextInt();
-		//sc.nextLine();	// 개행문자처리
-		
 	}
 	
 	public String getStuName() {
@@ -39,10 +33,7 @@ public class stuTest1 {
 	}
 	
 	public void takeBus(busTest1 tb) {
-		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지
-		// 총 2번 호출이 되기 때문에 사용 x
-		//this.money -= tb.getbCost();
-		//tb.take(tb.busPassenger);
+		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
 		tb.getBusPassenger();
 	}
 	public void stuInfo(busTest1 tb) {
