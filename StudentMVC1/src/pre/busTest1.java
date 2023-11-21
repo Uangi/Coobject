@@ -52,14 +52,14 @@ public class busTest1 {
 		firstmoney = firstmoney - bCost; // 첫 계산 후 초기 잔액값
 }
 	
-	public void take() {	
+	public void take() {	// 탑승
 		busPassenger++;
 	}
 	
 	
 	public void busInfo(busTest1 tb) {
 		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 "
-	+ ", 수입은 : " + tb.getIncome() + ", 현재 잔액은 : " + tb.getResultmoney() + ", 탑승 후 잔액: " + getFirstmoney() + "\n");
+	+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
 }
