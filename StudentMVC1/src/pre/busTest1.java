@@ -6,14 +6,15 @@ public class busTest1 {
 	private int bCost;
 	private int busPassenger;
 	private int income;
-	
+	private int resultmoney;
 //	public int getbCost() {
 //		return bCost;
 //	}
 
 	public busTest1() {	// 수입의 메소드
 		this.busPassenger = getBusPassenger();  // = 0;
-		this.income = getIncome(); // = 0;
+		this.income = getIncome(); // = 0
+		this.resultmoney = getResultmoney();
 	}
 	// tb.getbCost(), tb.getIncome() 고정 
 	public int getIncome() {
@@ -33,14 +34,25 @@ public class busTest1 {
 		return busPassenger;
 	}
 
+	public int getResultmoney() {
+		resultmoney = 10000 - bCost;
+		return resultmoney;
+	}
+	
 	public void take() {	// public void take(int income)
-		//this.income += this.bCost;		// this.income += bCost;
 		busPassenger++;
 								// return getIncome();
 	}
 	
+//	public void resultMoney(stuTest1 ts) {
+//		resultmoney = ts.getMoney() - bCost;
+//		
+//	}
+	
 	public void busInfo(busTest1 tb) {
-		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 " + ", 수입은 : " + tb.getIncome() );
+		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 "
+	+ ", 수입은 : " + tb.getIncome() + ", 잔액은 : " + tb.getResultmoney());
 	}
+	
 }
 //////////////두번째 클래스
