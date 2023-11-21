@@ -1,9 +1,8 @@
-package controller;
+package pre;
+
+import java.util.Scanner;
 
 public class mvcpre {
-	package pre;
-
-	import java.util.Scanner;
 
 	public class mvc {
 		
@@ -101,6 +100,7 @@ public class mvcpre {
 		        model.divide();
 		        view.displayResult(model.getResult());
 		    }
+		    
 		}
 
 		// Main 클래스
