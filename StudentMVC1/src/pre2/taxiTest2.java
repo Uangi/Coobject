@@ -62,19 +62,22 @@ public class taxiTest2 {
 	}
 	
 	public void taxiInfo(taxiTest2 tt) {
-		System.out.println("택시요금 : " + tt.getbCost(this.tCost) + "원, 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
+		System.out.println("택시요금 : " + tt.getbCost(tCost) + "원, 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
 		+ ", 택시수입은 : " + tt.getIncome() + "원, 현재 잔액은 : " + 
 		tt.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
 	public void taxiStart() {
+		int ch = 0;
 		TransView tv = new TransView();
 		stuTest2 st2 =  new stuTest2(0);
 		taxiTest2 tt2 =  new taxiTest2();
-		
-		st2.stuInfo();
-		st2.takeTaxi(tt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+		do {
+			taxiTest2 t2_2 =  new taxiTest2();
+		st2.takeTaxi(tt2);
 		tt2.taxiInfo(tt2);
+		ch++;
+		} while(ch < 2);
 	}
 
 }

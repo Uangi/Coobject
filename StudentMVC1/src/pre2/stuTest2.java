@@ -35,12 +35,12 @@ public class stuTest2 {
 	}
 	
 	public void takeBus(busTest2 tb) {
-		tb.Btake();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
+		tb.Btake();	
 		tb.getBusPassenger();
 	}
 	
 	public void takeTaxi(taxiTest2 tt) {
-		tt.Ttake();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
+		tt.Ttake();	
 		tt.getTaxiPassenger();
 	}
 	public void stuInfo() {
@@ -48,7 +48,6 @@ public class stuTest2 {
 				getGrade());
 	}
 	
-	//////////////////////////////////////////////
 	public void studentChoice(String choice) {
 		Scanner sc = new Scanner(System.in);
 		choice = sc.nextLine();	
@@ -68,28 +67,5 @@ public class stuTest2 {
 		System.out.println(choice);
 	}
 	
-	/////////////////// 런
-//	public static void run() {
-//		
-//		int ch = 0;
-//		TransView tv = new TransView();
-//		stuTest2 st2 =  new stuTest2(0);
-//		
-//		busTest2 bt2 =  new busTest2();
-//		
-//		
-//		//TransView.studentChoiceMessage(st);
-//		
-//		st2.stuInfo(bt2);
-//		st2.takeBus(bt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
-//		bt2.busInfo(bt2);
-//		do {
-//		busTest2 t2_2 =  new busTest2();
-//		st2.takeBus(bt2);	// 여기서 원래값
-//		bt2.busInfo(bt2);
-//		
-//		ch++;
-//		} while(ch < 3);
-//	}
 }
 //////////첫번째 클래스
