@@ -1,4 +1,4 @@
-package pre;
+package pre2;
 
 import java.util.Scanner;
 
@@ -52,10 +52,10 @@ public class taxiTest2 {
 		taxiPassenger++;
 	}
 	
-	public void taxiInfo(taxiTest2 tb) {
-		System.out.println("택시요금 : " + tb.getbCost(this.tCost) + ", 택시승객 수 : " + tb.getTaxiPassenger() + " 명 "
-		+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
-		tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
+	public void taxiInfo(taxiTest2 tt) {
+		System.out.println("택시요금 : " + tt.getbCost(this.tCost) + ", 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
+		+ ", 수입은 : " + tt.getIncome() + "원, 현재 잔액은 : " + 
+		tt.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
 	public void taxiStart() {

@@ -1,4 +1,4 @@
-package pre;
+package pre2;
 
 import java.util.Scanner;
 
