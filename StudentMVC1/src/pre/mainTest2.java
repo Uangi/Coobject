@@ -6,7 +6,7 @@ public class mainTest2 {
 
 	public static void main(String[] args) {
 		
-		stuTest2.run();
+		mainRun.run();
 			
 		//stuTest1 t1 =  new stuTest1();
 		//busTest1 t2 =  new busTest1();

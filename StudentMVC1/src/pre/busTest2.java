@@ -3,6 +3,7 @@ package pre;
 import java.util.Scanner;
 
 public class busTest2 {
+	
 	private int bCost;
 	private int busPassenger;
 	private int income;
@@ -18,7 +19,7 @@ public class busTest2 {
 	}
 	
 
-	public int getbCost(int bCost) {	// 여기서 갑자기 원래값으로 반환
+	public int getbCost(int bCost) {	
 		Scanner sc = new Scanner(System.in);
 		System.out.print("요금을 입력해주세요 : ");
 		this.bCost = sc.nextInt();
@@ -57,10 +58,30 @@ public class busTest2 {
 	}
 	
 	public void busInfo(busTest2 tb) {
-		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + ", 승객 수 : " + tb.getBusPassenger() + " 명 "
+		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + "원 , 버스승객 수 : " + tb.getBusPassenger() + " 명 "
 		+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
 		tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
+	public void busStart() {
+		int ch = 0;
+		TransView tv = new TransView();
+		stuTest2 st2 =  new stuTest2(0);
+		busTest2 bt2 =  new busTest2();
+		
+		
+		//TransView.studentChoiceMessage(st);
+		
+		st2.stuInfo(bt2);
+		st2.takeBus(bt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+		bt2.busInfo(bt2);
+		do {
+		busTest2 t2_2 =  new busTest2();
+		st2.takeBus(bt2);	// 여기서 원래값
+		bt2.busInfo(bt2);
+		
+		ch++;
+		} while(ch < 3);
+	}
 }
 //////////////두번째 클래스

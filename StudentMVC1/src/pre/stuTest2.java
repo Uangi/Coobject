@@ -40,22 +40,49 @@ public class stuTest2 {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
 				getGrade());
 	}
-	public static void run() {
-		int ch = 0;
-		stuTest2 t1 =  new stuTest2(0);
-		busTest2 t2 =  new busTest2();
-		t1.stuInfo(t2);
-		t1.takeBus(t2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+	
+	//////////////////////////////////////////////
+	public void studentChoice(String choice) {
+		Scanner sc = new Scanner(System.in);
+		choice = sc.nextLine();	
+		if("버스".equals(choice)) {
+			// 버스 메소드 시작
+			System.out.println("버스 메소드 시작");
+		}
+		else if("택시".equals(choice)) {
+			// 택시 메소드 시작
+			System.out.println("택시 메소드 시작");
+		}
+		else { 
+			// 예외처리 메소드 시작
+			System.out.println("예외처리 메소드 시작");
+		}
 		
-		t2.busInfo(t2);
-		do {
-		
-		busTest2 t2_2 =  new busTest2();
-		t1.takeBus(t2);	// 여기서 원래값
-		t2.busInfo(t2);
-		
-		ch++;
-		} while(ch < 3);
+		System.out.println(choice);
 	}
+	
+	/////////////////// 런
+//	public static void run() {
+//		
+//		int ch = 0;
+//		TransView tv = new TransView();
+//		stuTest2 st2 =  new stuTest2(0);
+//		
+//		busTest2 bt2 =  new busTest2();
+//		
+//		
+//		//TransView.studentChoiceMessage(st);
+//		
+//		st2.stuInfo(bt2);
+//		st2.takeBus(bt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+//		bt2.busInfo(bt2);
+//		do {
+//		busTest2 t2_2 =  new busTest2();
+//		st2.takeBus(bt2);	// 여기서 원래값
+//		bt2.busInfo(bt2);
+//		
+//		ch++;
+//		} while(ch < 3);
+//	}
 }
 //////////첫번째 클래스

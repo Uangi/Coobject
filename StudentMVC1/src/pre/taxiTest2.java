@@ -18,7 +18,7 @@ public class taxiTest2 {
 		this.resultmoney = getResultmoney();
 	}
 
-	public int getbCost(int tCost) {	// 여기서 갑자기 원래값으로 반환
+	public int getbCost(int tCost) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("요금을 입력해주세요 : ");
 		this.tCost = sc.nextInt();
@@ -52,12 +52,14 @@ public class taxiTest2 {
 		taxiPassenger++;
 	}
 	
-	public void busInfo(taxiTest2 tb) {
-		System.out.println("택시요금 : " + tb.getbCost(this.tCost) + ", 승객 수 : " + tb.getTaxiPassenger() + " 명 "
+	public void taxiInfo(taxiTest2 tb) {
+		System.out.println("택시요금 : " + tb.getbCost(this.tCost) + ", 택시승객 수 : " + tb.getTaxiPassenger() + " 명 "
 		+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
 		tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
-
+	public void taxiStart() {
+		
+	}
 
 }
