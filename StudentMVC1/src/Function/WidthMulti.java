@@ -1,4 +1,4 @@
-package pre;
+package Function;
 
 public class WidthMulti {
 	public void main(String[] args) {

@@ -6,7 +6,8 @@ public class stuTest2 {
 	
 	private final String stuName;
 	private final int grade;
-	private final int money = 10000;  
+	private final int MONEY = 10000;  
+	private final int num;
 	/*
 	 * 생성자에서 fianl을 써서 상수로 초기화, money = 3000이라면 초기화와 동시에 값 할당 만약 private final 쓰고
 	 * money에 값을 주고싶다면 this.money를 초기화하는 생성자2 만듬. 그래서 값이 변경이 안되기 때문에 setmoney 를 사용할
@@ -16,6 +17,7 @@ public class stuTest2 {
 	public stuTest2(int money) { // 생성자 
 		this.stuName = "박진영";
 		this.grade = 3;
+		this.num = 0;
 	}
 	
 	public String getStuName() {
@@ -26,17 +28,22 @@ public class stuTest2 {
 		return grade;
 	}
 	
-	public int getMoney(busTest2 tb) {
+	public int getMoney(busTest2 tb, taxiTest2 tt) {
 		tb.updateResultmoney();
 		tb.getResultmoney();
-		return money;
+		return MONEY;
 	}
 	
 	public void takeBus(busTest2 tb) {
-		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
+		tb.Btake();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
 		tb.getBusPassenger();
 	}
-	public void stuInfo(busTest2 tb) {
+	
+	public void takeTaxi(taxiTest2 tt) {
+		tt.Ttake();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
+		tt.getTaxiPassenger();
+	}
+	public void stuInfo() {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
 				getGrade());
 	}

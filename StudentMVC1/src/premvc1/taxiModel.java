@@ -1,4 +1,4 @@
-package pre2;
+package premvc1;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class taxiModel {
 		this.resultmoney = getResultmoney();
 	}
 
-	public int getbCost(int tCost) {	// 여기서 갑자기 원래값으로 반환
+	public int getbCost(int tCost) {	
 		Scanner sc = new Scanner(System.in);
 		System.out.print("요금을 입력해주세요 : ");
 		this.tCost = sc.nextInt();

@@ -1,9 +1,8 @@
-package pre2;
+package pre1;
 
 import java.util.Scanner;
 
-public class busTest2 {
-	
+public class busTest1 {
 	private int bCost;
 	private int busPassenger;
 	private int income;
@@ -11,13 +10,17 @@ public class busTest2 {
 	private int resultmoney;
 	private boolean isFirstExecution = true;
 
-	public busTest2() {	// 수입의 메소드
+	public busTest1() {	// 수입의 메소드
 		this.busPassenger = getBusPassenger();  // = 0;
 		this.income = getIncome(); // = 0
 		this.firstmoney = getFirstmoney();
 		this.resultmoney = getResultmoney();
 	}
 	
+	public int getIncome() {
+		income += bCost;
+		return income;
+	}
 
 	public int getbCost(int bCost) {	
 		Scanner sc = new Scanner(System.in);
@@ -30,11 +33,6 @@ public class busTest2 {
 		return busPassenger;
 	}
 
-	public int getIncome() {
-		income += bCost;
-		return income;
-	}
-	
 	public int getFirstmoney() {	// 탑승 후의 잔액
 		updateResultmoney(); // 초기값 반환
 		return firstmoney;
@@ -53,24 +51,15 @@ public class busTest2 {
 		firstmoney = firstmoney - bCost; // 첫 계산 후 초기 잔액값
 	}
 	
-	public void Btake() {	// 승객 수 증가
+	public void take() {	// 승객 수 증가
 		busPassenger++;
 	}
 	
-	public void busInfo(busTest2 tb) {
-		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + "원 , 버스승객 수 : " + tb.getBusPassenger() + " 명 "
-		+ ", 버스수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
+	public void busInfo(busTest1 tb) {
+		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + "원, 승객 수 : " + tb.getBusPassenger() + " 명 "
+		+ ", 수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
 		tb.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
-	public void busStart() {
-		TransView tv = new TransView();
-		stuTest2 st2 =  new stuTest2(0);
-		busTest2 bt2 =  new busTest2();
-		
-		st2.stuInfo();
-		st2.takeBus(bt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
-		bt2.busInfo(bt2);
-	}
 }
 //////////////두번째 클래스

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class taxiTest2 {
 
-	private int tCost;
+	private final int tCost = 300;
 	private int taxiPassenger;
 	private int income;
 	private int firstmoney;
@@ -19,9 +19,7 @@ public class taxiTest2 {
 	}
 
 	public int getbCost(int tCost) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("요금을 입력해주세요 : ");
-		this.tCost = sc.nextInt();
+		System.out.print("택시 요금은 : " + tCost + "원 입니다.");
 		return this.tCost;
 	}
 	
@@ -34,32 +32,49 @@ public class taxiTest2 {
 	}
 
 	public int getIncome() {
+		if(isFirstExecution) {
+		income = 0;
+		income += tCost;
+		isFirstExecution = false;
+		}
 		return income;
 	}
 
 	public int getFirstmoney() {
+		updateResultmoney();
 		return firstmoney;
 	}
-
-	public int getResultmoney() {
+	
+	public int getResultmoney() {	// 현재 잔액
+		resultmoney = firstmoney;
 		return resultmoney;
 	}
 	
-	public void updateResultmoeny() {
-		
+	public void updateResultmoney() {
+		if(isFirstExecution) {	// 한번만 실행
+			firstmoney = 10000;
+			isFirstExecution = false;
+		}
+		firstmoney = firstmoney - tCost; // 첫 계산 후 초기 잔액값
 	}
-	public void take() {	// 승객 수 증가
+	public void Ttake() {	// 승객 수 증가
 		taxiPassenger++;
 	}
 	
 	public void taxiInfo(taxiTest2 tt) {
-		System.out.println("택시요금 : " + tt.getbCost(this.tCost) + ", 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
-		+ ", 수입은 : " + tt.getIncome() + "원, 현재 잔액은 : " + 
+		System.out.println("택시요금 : " + tt.getbCost(this.tCost) + "원, 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
+		+ ", 택시수입은 : " + tt.getIncome() + "원, 현재 잔액은 : " + 
 		tt.getResultmoney() + "원, 탑승 후 잔액: " + getFirstmoney() + "원\n");
 	}
 	
 	public void taxiStart() {
+		TransView tv = new TransView();
+		stuTest2 st2 =  new stuTest2(0);
+		taxiTest2 tt2 =  new taxiTest2();
 		
+		st2.stuInfo();
+		st2.takeTaxi(tt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
+		tt2.taxiInfo(tt2);
 	}
 
 }

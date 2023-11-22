@@ -1,8 +1,8 @@
-package premvc1;
+package pre1;
 
 import java.util.Scanner;
 
-public class stuModel {
+public class stuTest1 {
 	
 	private final String stuName;
 	private final int grade;
@@ -13,7 +13,7 @@ public class stuModel {
 	 * 필요가 없음. 결국 main 에서 getMoney로 값을 읽어올 순 있지만 setMoney로 변경이 안되서 사용안함. final을 사용하지
 	 * 않고 private만 걸어두고 입력받는 방법은 생성자 2에서 스캐너 객체 만들고 this.?? = sc.nextInt(); 이렇게하면 됨
 	 */
-	public stuModel(int money) { // 생성자 
+	public stuTest1(int money) { // 생성자 
 		this.stuName = "박진영";
 		this.grade = 3;
 	}
@@ -26,31 +26,31 @@ public class stuModel {
 		return grade;
 	}
 	
-	public int getMoney(busModel tb) {
+	public int getMoney(busTest1 tb) {
 		tb.updateResultmoney();
 		tb.getResultmoney();
 		return money;
 	}
 	
-	public void takeBus(busModel tb) {
+	public void takeBus(busTest1 tb) {
 		tb.take();	// tb.take(tb.getIncome()); X -> busInfo에서도 getIncome()을 사용하면 이것까지 총 2번 호출이 되기 때문에 사용 x
 		tb.getBusPassenger();
 	}
-	public void stuInfo(busModel tb) {
+	public void stuInfo(busTest1 tb) {
 		System.out.println("학생 이름 : " + getStuName() + ", 현재 학년 : " +
 				getGrade());
 	}
 	public static void run() {
 		int ch = 0;
-		stuModel t1 =  new stuModel(0);
-		busModel t2 =  new busModel();
+		stuTest1 t1 =  new stuTest1(0);
+		busTest1 t2 =  new busTest1();
 		t1.stuInfo(t2);
 		t1.takeBus(t2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
 		
 		t2.busInfo(t2);
 		do {
 		
-		busModel t2_2 =  new busModel();
+		busTest1 t2_2 =  new busTest1();
 		t1.takeBus(t2);	// 여기서 원래값
 		t2.busInfo(t2);
 		

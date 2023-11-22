@@ -1,4 +1,4 @@
-package pre2;
+package premvc1;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class busModel {
 	}
 	
 
-	public int getbCost(int bCost) {	// 여기서 갑자기 원래값으로 반환
+	public int getbCost(int bCost) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("요금을 입력해주세요 : ");
 		this.bCost = sc.nextInt();
