@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class TransView {
 
 	public void studentChoice(String choice) {
-		System.out.println("뭐 탈래 ?");
 		Scanner sc = new Scanner(System.in);
+		System.out.println("뭐 탈래 ?");
 		choice = sc.nextLine();	
 		if("버스".equals(choice)) {
 			
@@ -29,3 +29,4 @@ public class TransView {
 		//System.out.println(choice);	// 값이 비었는지 확인
 	}
 }
+/////////////////// 네번째 클래스
