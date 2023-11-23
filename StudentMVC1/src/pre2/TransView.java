@@ -26,6 +26,6 @@ public class TransView {
 			// 예외처리 메소드 시작
 			System.out.println("예외처리 메소드 시작");
 		}
-		System.out.println(choice);	// 값이 비었는지 확인
+		//System.out.println(choice);	// 값이 비었는지 확인
 	}
 }

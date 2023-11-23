@@ -72,13 +72,10 @@ public class busTest2 {
 		st2.stuInfo();
 		st2.takeBus(bt2);	// 버스 요금 출력 -> 수입 += 비용, 승객수 증가, return income
 		bt2.busInfo(bt2);
-		do {
-			busTest2 t2_2 =  new busTest2();
+		
 			st2.takeBus(bt2);	// 여기서 원래값
 			bt2.busInfo(bt2);
-
-			ch++;
-			} while(ch < 2);
 	}
 }
+		
 //////////////두번째 클래스
