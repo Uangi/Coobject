@@ -15,7 +15,12 @@ public class stuTest2 {
 	private final String stuName;
 	private final int grade;
 	private final static int MONEY = 10000;
+	public static int balance;
 	
+	public static int getBalance() {
+		return balance;
+	}
+
 	public stuTest2(int MONEY) {
 		this.stuName = "박진영";
 		this.grade = 3;

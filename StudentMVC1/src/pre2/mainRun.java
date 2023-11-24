@@ -10,7 +10,7 @@ public class mainRun {	// 다 합치기
 	public static void run() {
 		
 		
-		TransView tv = new TransView();
+		TransView tv = new TransView();	// 분기점 
 		TransView.studentChoice(choice);
 		
 		while(choice == null){
