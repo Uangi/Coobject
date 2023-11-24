@@ -11,10 +11,10 @@ public class mainRun {	// 다 합치기
 		
 		
 		TransView tv = new TransView();
-		tv.studentChoice(choice);
+		TransView.studentChoice(choice);
 		
 		while(choice == null){
-			tv.studentChoice(choice);
+			TransView.studentChoice(choice);
 			Scanner sc = new Scanner(System.in);
 			System.out.print("계속하시겠습니까? (Y/N) ");
 	        String input = sc.next();
