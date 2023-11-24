@@ -5,10 +5,11 @@ import java.util.Vector;
 
 public class practiceVector {
 
-	public void vecvec(stuTest st) {
+	public void vecvec() {
+		
 		List<stuTest> list = new Vector<stuTest>();
 		
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 2; i++) {
 		list.add(new stuTest());
 		}
 		

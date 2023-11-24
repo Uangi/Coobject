@@ -11,7 +11,6 @@ public class taxiTest2 {
 	
 	private static boolean taxiisFirstExecution = true;
 	public static boolean taxiisFirstExecution2 = true;
-	private boolean isFirstExecution3 = true;
 	
 	public taxiTest2() {
 		taxiTest2.income = getIncome();

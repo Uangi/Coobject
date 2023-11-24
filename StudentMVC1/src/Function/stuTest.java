@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class stuTest {
 
-	public String name;
-	public int grade;
-	public int MONEY;
+	public String name = "";
+	public int grade = 0;
+	public int MONEY = 0;
 	
 	public stuTest() {
 		Scanner sc = new Scanner(System.in);
@@ -19,11 +19,9 @@ public class stuTest {
     	System.out.println("현재 가지고 있는 잔액을 입력하세요 : ");
     	MONEY = sc.nextInt();
     	
-		
 	}
 
 	public static void run(practiceVector vc) {
-		stuTest st = new stuTest();
-		vc.vecvec(st);
+		vc.vecvec();
 	}
 }
