@@ -29,7 +29,7 @@ public class strSplit {
 			}
 
 			// 문자열이 숫자인지 확인하는 메소드
-			private static boolean isNumber(String str) {
+			public boolean isNumber(String str) {
 				try {
 					Double.parseDouble(str);	// 입력한 문자열이 들어오는대로 double형으로 변환
 					return true;	// 변환이 가능하면 true
