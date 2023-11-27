@@ -1,4 +1,4 @@
-package JAVA_practice;
+package String_Calculator;
 
 public class Third {
 	
