@@ -12,7 +12,7 @@ import java.util.Scanner;
 											
 *
 */
-public class StringCalculater {
+public class StringCalculator {
 
 	
 	private static String[] oper = new String[3];
