@@ -3,7 +3,7 @@ package String_Calculator2;
 public class Calculator {
 	
 	public double result;
-	public static double Calculate(double n1, double n2, String op) {
+	public double Calculate(double n1, double n2, String op) {
 		
 		switch(op) {
 		case "+":
@@ -21,9 +21,9 @@ public class Calculator {
 	}
 	
 	public void numPush(numberInput ip) {
-		result = Calculator.Calculate(ip.number.get(0),ip.number.get(1),ip.operator.get(0));
-		result = Calculator.Calculate(result, ip.number.get(2),ip.operator.get(1));
-		result = Calculator.Calculate(result, ip.number.get(3),ip.operator.get(2));
+		result = Calculate(ip.number.get(0),ip.number.get(1),ip.operator.get(0));
+		result = Calculate(result, ip.number.get(2),ip.operator.get(1));
+		result = Calculate(result, ip.number.get(3),ip.operator.get(2));
 	}
 
 	public double getResult() {
