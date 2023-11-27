@@ -40,15 +40,3 @@ public class main {
 		System.out.printf("%2d%2s%2d%2s%2d%2s%2d = %.2f",num1,oper1,num2,oper2,num3,oper3,num4,Third.result3 );
 	}	
 }
-//        System.out.print("문자열을 입력하세요: ");
-//        String userInput = scanner.nextLine();
-//        String userInput2 = scanner.nextLine();
-//
-//        // 입력 받은 문자열에서 개행 문자 제거
-//        userInput = userInput.replace("\n", "").replace("\r", "");
-//        userInput2 = userInput2.replace("\n", "").replace("\r", "");
-//
-//        System.out.print("입력 받은 문자열: " + userInput);
-//        System.out.print(userInput2);
-//
-//        scanner.close();
