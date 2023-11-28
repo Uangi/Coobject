@@ -6,10 +6,6 @@ public class Third {
 	public static int num4;
 	public static double result3;
 	
-	public Third() {
-		this.oper3 = oper3;
-		this.result3 = result3;
-	}
 //	if (oper1.equals("+")
 	public static double Add3() {
 		result3 = Second.result2 + main.num4;

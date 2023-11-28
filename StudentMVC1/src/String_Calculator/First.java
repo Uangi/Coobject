@@ -9,9 +9,6 @@ public class First {
 	public static int num1, num2;
 	public static double result1;
 	
-	public First() {
-		this.result1 = result1;
-	}
 	public static double Add() {
 		result1 = main.num1 + main.num2;
 		return result1;

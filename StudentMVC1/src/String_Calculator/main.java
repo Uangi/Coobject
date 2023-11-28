@@ -1,5 +1,6 @@
 package String_Calculator;
 
+import java.io.DataInput;
 import java.util.Scanner;
 
 /*사용자가 입력한 문자열 값에 따라 사칙연산을 수행할 수 있는 계산기를 구현해야 한다.
@@ -13,11 +14,8 @@ import java.util.Scanner;
 
 public class main {
 
-	private static int[] num = new int[4];
-	
 	public static int num1,num2,num3,num4 = 0;
 	static String oper1, oper2, oper3;
-	
 	
 	public static void Input() {
 		Scanner sc = new Scanner(System.in);
