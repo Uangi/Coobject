@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-
+// 문자열 계산 split, replaceAll
 public class main {
 
 	public static void main(String[] args) throws IOException {
