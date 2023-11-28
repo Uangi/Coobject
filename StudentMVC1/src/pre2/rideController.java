@@ -7,7 +7,7 @@ public class rideController {
 	private static int bCost;
 	private static int tCost;
 	public static boolean busisFirstExecution2 = true;
-	private static int balance;
+	public static int balance;
 	public static boolean taxiisFirstExecution2 = true;
 	
 	public static void busGo(busTest2 bt2) {
@@ -28,8 +28,8 @@ public class rideController {
 	
 	public static int busgetBalance() {	// 잔액
 		if(busisFirstExecution2 || taxiTest2.taxiisFirstExecution2 == false) {	// 한번만 실행
-			balance = getMONEY() - bCost;	// 버스가 처음 계산했을 경우
-			busisFirstExecution2 = false;
+			balance = getMONEY() - bCost;	// 버스가 처음 계산했을 경우 -> 10000 - 버스요금
+			busisFirstExecution2 = false;	// 다시 시작하면 true로 초기화
 		}	balance -= bCost;
 		return stuTest2.getBalance();
 	}
@@ -45,3 +45,4 @@ public class rideController {
 		return 10000;
 	}
 }
+////////////// 다섯번째 클래스

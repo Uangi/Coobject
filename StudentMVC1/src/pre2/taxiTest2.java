@@ -49,7 +49,7 @@ public class taxiTest2 {
 	public void taxiInfo(taxiTest2 tt) {
 		System.out.println("택시요금 : " + tt.gettCost(this.tCost) + "원, 택시승객 수 : " + tt.getTaxiPassenger() + " 명 "
 		+ ", 택시수입은 : " + tt.getIncome() + "원, 현재 잔액은 : " + 
-		tt.getBalance() + "원\n");
+		taxiTest2.getBalance() + "원\n");
 	}
 	
 	public void taxiStart(taxiTest2 tt2) {
@@ -58,3 +58,4 @@ public class taxiTest2 {
 		tt2.taxiInfo(tt2);
 	}
 }
+////////////////////	세번째 클래스

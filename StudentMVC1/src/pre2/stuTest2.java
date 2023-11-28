@@ -43,4 +43,4 @@ public class stuTest2 {
 				getGrade());
 	}
 }
-//////////첫번째 클래스
+//////////	첫번째 클래스

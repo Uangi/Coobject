@@ -55,7 +55,7 @@ public class busTest2 {
 	public void busInfo(busTest2 tb) {
 		System.out.println("버스요금 : " + tb.getbCost(this.bCost) + "원 , 버스승객 수 : " + tb.getBusPassenger() + " 명 "
 		+ ", 버스수입은 : " + tb.getIncome() + "원, 현재 잔액은 : " + 
-		tb.getBalance() + "원\n");
+		busTest2.getBalance() + "원\n");
 	}
 	
 	public void busStart(busTest2 bt2) {
@@ -65,4 +65,4 @@ public class busTest2 {
 	}
 }
 		
-//////////////두번째 클래스
+//////////////	두번째 클래스
