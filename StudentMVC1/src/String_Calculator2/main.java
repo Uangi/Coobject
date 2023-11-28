@@ -13,6 +13,8 @@ import java.util.Scanner;
 예를 들어 "2 + 3 * 4 / 2"와 같은 문자열을 입력할 경우 2 + 3 * 4 / 2 실행 결과인 10을 출력해야 한다.
 */
 
+
+// list<>ArrayList
 public class main {
 
 	public static void main(String[] args) {
