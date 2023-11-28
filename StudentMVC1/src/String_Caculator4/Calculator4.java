@@ -5,18 +5,18 @@ import String_Calculator2.numberInput;
 public class Calculator4 {
 
 	public double result;
-	public double calcu(double num1, double num2, strSplit spl) {
+	public double calcu(double num1, double num2, StringTokenizer spl) {
 		// str은 배열
-		if(spl.str.equals("+")) {
+		if(spl.equals("+")) {
 			return num1 + num2;
 		}
-		else if(spl.str.equals("-")) {
+		else if(spl.equals("-")) {
 			return num1 - num2;
 		}
-		else if(spl.str.equals("*")) {
+		else if(spl.equals("*")) {
 			return num1 * num2;
 		}
-		else if(spl.str.equals("/")) {
+		else if(spl.equals("/")) {
 			return num1 / num2;
 		}
 		else { 
@@ -24,7 +24,7 @@ public class Calculator4 {
 			return 0;
 		}
 	}
-		public double numPush2(strSplit spl) {
+		public double numPush2(StringTokenizer spl) {
 			result = calcu(spl.number.get(0),spl.number.get(1),spl.operator.get(0));
 			result = calcu(result, spl.number.get(2),spl.operator.get(1));
 			return result = calcu(result, spl.number.get(3),spl.operator.get(2));
