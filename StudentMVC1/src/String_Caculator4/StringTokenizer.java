@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class strSplit {
+public class StringTokenizer {
 
 	// 리스트 생성
 	List<Double> number = new ArrayList<Double>();

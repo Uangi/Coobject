@@ -10,7 +10,7 @@ public class main {
 
 	public static void main(String[] args) {
 
-		strSplit spl = new strSplit();
+		StringTokenizer spl = new StringTokenizer();
 		Calculator4 cc = new Calculator4();
 		spl.split();
 //		//spl.isNumber();
