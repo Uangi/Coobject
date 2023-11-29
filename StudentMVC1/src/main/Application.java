@@ -2,9 +2,9 @@ package main;
 
 import java.util.Scanner;
 
-import controller.Controller;
+import controller.Main;
 import model.StudentModel;
-import view.View;
+import view.Display;
 
 public class Application {
 
@@ -19,8 +19,8 @@ public class Application {
 		
 		int buscost = sc.nextInt();
 		StudentModel model = new StudentModel();
-		View view = new View(model);
-		Controller controller = new Controller(model, view);
+		Display view = new Display(model);
+		Main controller = new Main(model, view);
 		controller.setbusIncome(buscost);
 		
 		

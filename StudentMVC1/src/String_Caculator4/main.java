@@ -13,11 +13,11 @@ public class main {
 		StringTokenizer spl = new StringTokenizer();
 		Calculator4 cc = new Calculator4();
 		spl.split();
-//		//spl.isNumber();
-//		cc.numPush2(spl);
-//		cc.calcu();
-//		System.out.println("결과 :  " + cc.result);
-//		
+		//spl.isNumber();
+		cc.numPush2(spl);
+		cc.calcu();
+		System.out.println("결과 :  " + cc.result);
+		
 	}
 
 	

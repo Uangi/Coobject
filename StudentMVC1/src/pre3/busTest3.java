@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import Function.shareMoney;
 
-public class busTest3 implements shareMoney {
+public class busTest3 implements Input {
 	
 	private int bCost;
 	private int busPassenger;
