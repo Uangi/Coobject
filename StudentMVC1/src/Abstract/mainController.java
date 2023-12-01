@@ -6,7 +6,7 @@ public class mainController {
 		AccountService ac = new Account();	// 인터페이스|객체 = new 피상속 클래스
 		Input ip = new Input();
 		ac.deposit();
-		ac.withdraw();
+		ac.choiceToy();
 		ip.nowBalance(ac);
 		
 		
@@ -22,17 +22,17 @@ public class mainController {
 		 * 괄호로 한번 더 묶어서 표현해야한다.
 		 * .*/
 		
-		ProductService product1 = new Product();
-		ProductService product2 = new Product();
-		((Product) product1).setStock(10);
-		((Product) product2).setStock(5);
+//		ProductService product1 = new Product();
+//		ProductService product2 = new Product();
+////		((Product) product1).setStock(10);
+////		((Product) product2).setStock(5);
+//		
+//		OrderService order = new Order();
+//		((Order)order).addProduct(product1);
+//		((Order)order).addProduct(product2);
+//		order.createOrder();
 		
-		OrderService order = new Order();
-		((Order)order).addProduct(product1);
-		((Order)order).addProduct(product2);
-		order.createOrder();
-		
-		((Product) product1).setStock(0);
-		((Product) product2).setStock(0);
+//		((Product) product1).setStock(0);
+//		((Product) product2).setStock(0);
 	}
 }

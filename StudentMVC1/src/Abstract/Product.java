@@ -38,7 +38,4 @@ class Product implements ProductService{
 		return stock;
 	}
 
-	void setStock(int stock) {
-		this.stock = A + B + C;
-	}
 }

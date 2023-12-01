@@ -31,5 +31,6 @@ public static void main(String[] args) {
 		for (char c : charArray) {
 		    System.out.println(c);
 		}
- }
+	}
+	
 }

@@ -3,6 +3,7 @@ package Abstract;
 import java.util.Scanner;
 
 interface AccountService {
+	int balance = 0;
 	void deposit();
 	void choiceToy();
 	int getBalance();
