@@ -15,10 +15,11 @@ class ToyShop implements SelectToy {
 	private static final int APEACH_PRICE = 1000;
 	private static final int BEAR_PRICE = 2000;
 	private static final int LION_PRICE = 3000;
-	public int newbalance;
 	Account ac = new Account();		// 무한 루프 
+	public int newbalance;
 	
 	public ToyShop() {
+		int newbalance;
 		// TODO Auto-generated constructor stub
 	}
 

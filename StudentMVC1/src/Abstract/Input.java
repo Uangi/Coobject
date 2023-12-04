@@ -28,7 +28,7 @@ public class Input {
 		System.out.println("잔액은 : " + ac.getBalance());
 	}
 	
-	public void buyAfterBalance(ToyShop ts) {
-		System.out.println("잔액은 : " + ts.newbalance);
-	}
+//	public void buyAfterBalance(ToyShop ts) {
+//		System.out.println("잔액은 : " + ts.newbalance);
+//	}
 }

@@ -4,13 +4,13 @@ public class mainController {
 
 	public static void run() { 
 		AccountService ac = new Account();	// 인터페이스|객체 = new 피상속 클래스
-		SelectToy ts = new ToyShop();
+		ToyShop ts = new ToyShop();
 		Input ip = new Input();
 		buyControl bc = new buyControl();
 		ac.deposit();
 //		ip.choiceToy();
 		bc.buyToy();
-		ip.nowBalance(ac);
+//		ip.nowBalance(ac);
 		}	
 	}
 //		System.out.println("잔액은 : " + ((Account) ac).getBalance());

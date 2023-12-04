@@ -3,7 +3,7 @@ package Abstract;
 import java.util.Scanner;
 
 interface AccountService {
-	void deposit();
+	int deposit();
 //	void buyToy();
 	void setBalance(int newBalance);
 	int getBalance();
@@ -16,12 +16,12 @@ class Account implements AccountService {
 	Input ip = new Input();
 	
 	@Override
-	public void deposit() {	
+	public int deposit() {	
 	amount = ip.howmuchDeposit();	// static을 쓰거나 객체 생성하거나
 	balance += amount;
 	System.out.println("입금 : " + amount);	// 표시
+	return balance;
 	}
-
 	@Override
 	public int getBalance() {
 		return balance;

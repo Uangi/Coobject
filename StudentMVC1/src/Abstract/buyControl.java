@@ -14,11 +14,11 @@ public class buyControl {
 	public void buyToy() {
 		
 			T = ip.choiceToy();
-			if( T.equals("A")) {
-//				ts.apeachToy();	// static 을 쓰려면 인터페이스 X
-				ts.apeachToy();  // apeachToy()의 반환값을 저장
-	            ip.nowBalance(ac);  // 업데이트된 잔액을 출력
-	            ip.buyAfterBalance(ts);
+			if( T.equals("a")) {
+				// static 을 쓰려면 인터페이스 X
+				ts.newbalance = ts.apeachToy();  // apeachToy()의 반환값을 저장
+				ac.setBalance(ts.newbalance);     // 업데이트된 잔액으로 설정
+				ip.nowBalance(ac);
 			}
 			else if(T == "B") {
 				ts.bearToy();
