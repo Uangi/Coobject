@@ -27,7 +27,7 @@ class ToyShop implements SelectToy {
 	public int apeachToy() {
 //	 	ac.balance -= APEACH_PRICE;
 //		return ac.getBalance();
-		int newbalance = ac.getBalance() - APEACH_PRICE;
+		int newbalance = ac.deposit() - APEACH_PRICE;	// getBalance가 0으로 반환됨 -> 그래서 임시로 deposit
         ac.setBalance(newbalance); // 업데이트된 잔액으로 설정
         return newbalance;
 	}

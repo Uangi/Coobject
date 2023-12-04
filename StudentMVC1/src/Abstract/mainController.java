@@ -7,7 +7,7 @@ public class mainController {
 		ToyShop ts = new ToyShop();
 		Input ip = new Input();
 		buyControl bc = new buyControl();
-		ac.deposit();
+//		ac.deposit();
 //		ip.choiceToy();
 		bc.buyToy();
 //		ip.nowBalance(ac);
