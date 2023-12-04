@@ -4,12 +4,15 @@ public class mainController {
 
 	public static void run() { 
 		AccountService ac = new Account();	// 인터페이스|객체 = new 피상속 클래스
+		SelectToy ts = new ToyShop();
 		Input ip = new Input();
+		buyControl bc = new buyControl();
 		ac.deposit();
-		ac.choiceToy();
+//		ip.choiceToy();
+		bc.buyToy();
 		ip.nowBalance(ac);
-		
-		
+		}	
+	}
 //		System.out.println("잔액은 : " + ((Account) ac).getBalance());
 		/* ac.getBalance가 안되고 클래스 형변환하는 이유 ★
 		 * 첫 줄에 Account의 객체(ac)가 인터페이스 타입으로 선언되었다.
@@ -34,5 +37,5 @@ public class mainController {
 		
 //		((Product) product1).setStock(0);
 //		((Product) product2).setStock(0);
-	}
-}
+//	}
+//}

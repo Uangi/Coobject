@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 interface AccountService {
 	void deposit();
-	void choiceToy();
+//	void buyToy();
+	void setBalance(int newBalance);
 	int getBalance();
 }
 
@@ -12,11 +13,7 @@ class Account implements AccountService {
 	
 	public int amount;	// 입금액?
 	public int balance;	// 잔액
-	public char T;	// 장난감 선택
-	
-//	Scanner sc = new Scanner(System.in);
 	Input ip = new Input();
-	public SelectToy ts;	// 무한 루프
 	
 	@Override
 	public void deposit() {	
@@ -26,31 +23,13 @@ class Account implements AccountService {
 	}
 
 	@Override
-	public void choiceToy() { // 여러 개 고를 수 있게 하기
-		if(T == 'A') {
-			ts.apeachToy();	// static 을 쓰려면 인터페이스 X
-			
-		}
-		else if(T == 'B') {
-			ts.bearToy();
-		}
-		else if(T == 'L') {
-			ts.LionToy();
-		}
-		else {
-			ip.notEnough();
-		}
-	}
-//	public void setBalance(int balance) {
-//		this.balance = balance;
-//	}
-
-	@Override
 	public int getBalance() {
 		return balance;
 	}
 	
-	
-
+	@Override
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
 	
 }

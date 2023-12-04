@@ -11,9 +11,9 @@ public class Input {
 		return sc.nextInt();
 	}
 	
-	public char choiceToy() {
+	public String choiceToy() {
 		System.out.print("어떤 장난감 살래? : ");
-		return sc.next().charAt(0);
+		return sc.next();
 	}
 	
 	
@@ -26,5 +26,9 @@ public class Input {
 	
 	public void nowBalance(AccountService ac) {
 		System.out.println("잔액은 : " + ac.getBalance());
+	}
+	
+	public void buyAfterBalance(ToyShop ts) {
+		System.out.println("잔액은 : " + ts.newbalance);
 	}
 }
