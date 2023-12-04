@@ -3,7 +3,6 @@ package Abstract;
 import java.util.Scanner;
 
 interface AccountService {
-	int balance = 0;
 	void deposit();
 	void choiceToy();
 	int getBalance();
@@ -15,9 +14,9 @@ class Account implements AccountService {
 	public int balance;	// 잔액
 	public char T;	// 장난감 선택
 	
-	Scanner sc = new Scanner(System.in);
+//	Scanner sc = new Scanner(System.in);
 	Input ip = new Input();
-	SelectToy ts = new ToyShop();
+	public SelectToy ts;	// 무한 루프
 	
 	@Override
 	public void deposit() {	

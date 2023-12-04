@@ -16,7 +16,7 @@ class ToyShop implements SelectToy {
 	private static final int BEAR_PRICE = 2000;
 	private static final int LION_PRICE = 3000;
 	
-	Account ac = new Account();
+	public AccountService ac;		// 무한 루프 
 	
 	@Override
 	public int apeachToy(AccountService ac) {
