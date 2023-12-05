@@ -31,3 +31,12 @@ public class buyControl {
 			}
 		}
 }
+/*
+
+ob.sort(data) -> sort 메소드 호출해서 부모클래스 sort -> int[] value에 data를 넣음
+부모 클래스 sort -> sorting
+자식 클래스 sorting() 호출
+(단, sort 메소드 밖인 부모클래스에서 sorting이 선언되지않으면 사용할 수 없음)
+이후 자식 클래스 sorting 에서 정렬한 후 내보냄.
+
+*/
