@@ -1,9 +1,7 @@
-package com.naver;
+package ListStudy;
 
 import java.util.Scanner;
 
-import com.day15.Test3_Score;
-import com.day15.Test3_ScoreImpl;
 
 public class NaverMain {
 

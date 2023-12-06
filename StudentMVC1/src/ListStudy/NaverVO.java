@@ -1,4 +1,4 @@
-package com.naver;
+package ListStudy;
 
 public class NaverVO {
 	
@@ -15,8 +15,8 @@ public class NaverVO {
 		return ID;
 	}
 
-	public void setID(String iD) {
-		ID = iD;
+	public void setID(String id) {
+		ID = id;
 	}
 
 	public void setPW1(String pW1) {

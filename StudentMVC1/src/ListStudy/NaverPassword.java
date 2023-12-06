@@ -1,4 +1,4 @@
-package com.naver;
+package ListStudy;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class NaverPassword {
 	}
 
 	public void passwordCreate(NaverVO vo) {
-	    System.out.println("비밀번호 : ");
+	    System.out.print("비밀번호 : ");
 	    vo.setPW1(sc.next());
 	    
 	    secondPasswordCheck(vo);
