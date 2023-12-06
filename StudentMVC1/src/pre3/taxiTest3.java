@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import Function.shareMoney;
 
-public class taxiTest3 implements Input{
+public class taxiTest3 implements View{
 
 	private final int tCost = 300;
 	private int taxiPassenger;
