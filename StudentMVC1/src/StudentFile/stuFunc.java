@@ -3,6 +3,7 @@ package StudentFile;
 import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -40,31 +41,38 @@ public class stuFunc implements Serializable {
         }
     }
 
-    public List<stuVO> getUser() {
+    public List<stuVO> getUser(List<stuVO> existingData) {
         return user;
     }
 
     public void Print() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\doc\\student8.txt"))) {
-        	List<stuVO> existingData = (List<stuVO>) ois.readObject();
-            user.addAll(existingData); // 파일에서 읽어온 데이터를 추가
+    	 try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\doc\\student8.txt"))) {
+    	        List<stuVO> existingData;
+    	        while (true) {
+    	            try {
+    	                existingData = (List<stuVO>) ois.readObject();
+    	                if (existingData.isEmpty()) {
+    	                    break; // 파일의 끝에 도달하고 데이터가 없으면 루프를 종료
+    	                }
+//    	                user.addAll(existingData);
+    	            } catch (EOFException e) {
+    	                break; // 파일의 끝에 도달하면 루프를 종료
+    	            }
+    	        }
 
-        	for (stuVO vo : user) {
-//            user.clear();
-
-                System.out.println(vo.toString());    
-            }
-
-        } catch (Exception e) {
-            System.err.println(e.toString());
-        }
+    	        for (stuVO vo : user) {
+    	            System.out.println(vo.toString());
+    	        }
+    	    } catch (Exception e) {
+    	        System.err.println(e.toString());
+    	    }
     }
 
     public void Quit() {
     	try {
         	FileOutputStream fos = new  FileOutputStream("c:\\doc\\student8.txt");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(user);
+            oos.writeObject(getUser(user));
             System.out.println("데이터 저장 완료!");
 
         } catch (Exception e) {
