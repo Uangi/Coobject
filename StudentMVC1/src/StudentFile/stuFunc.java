@@ -1,5 +1,6 @@
 package StudentFile;
 
+import java.awt.Container;
 import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -15,14 +16,15 @@ import java.util.Scanner;
 
 public class stuFunc implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private List<stuVO> user = new ArrayList<>();
-	Scanner sc = new Scanner(System.in);
-	
-	public void Input() {
+   /**
+    * 
+    */
+   private static final long serialVersionUID = 1L;
+   private List<stuVO> user = new ArrayList<>();
+   private List<stuVO> uniqueUsers = new ArrayList<>();
+   Scanner sc = new Scanner(System.in);
+   
+   public void Input() {
         stuVO vo = new stuVO();
         try {
             System.out.print("이름: ");
@@ -41,37 +43,43 @@ public class stuFunc implements Serializable {
         }
     }
 
-    public List<stuVO> getUser(List<stuVO> existingData) {
-        return user;
+   private boolean containsName(List<stuVO> userList, String name) {
+       for (stuVO vo : userList) {
+           if (vo.getName().equals(name)) {
+               return true;  // 이름이 이미 존재하면 true 반환
+           }
+       }
+       return false;
+   }
+   
+    public List<stuVO> getUser(List<stuVO> userList) {
+           for (stuVO vo : userList) {   // 입력된 목록 순회 -> 목록에 포함X -> 추가
+               if (!containsName(uniqueUsers,vo.getName())) {
+                   uniqueUsers.add(vo);
+               }
+           }
+           return uniqueUsers;
     }
 
     public void Print() {
-    	 try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\doc\\student8.txt"))) {
-    	        List<stuVO> existingData;
-    	        while (true) {
-    	            try {
-    	                existingData = (List<stuVO>) ois.readObject();
-    	                if (existingData.isEmpty()) {
-    	                    break; // 파일의 끝에 도달하고 데이터가 없으면 루프를 종료
-    	                }
-//    	                user.addAll(existingData);
-    	            } catch (EOFException e) {
-    	                break; // 파일의 끝에 도달하면 루프를 종료
-    	            }
-    	        }
-
-    	        for (stuVO vo : user) {
-    	            System.out.println(vo.toString());
-    	        }
-    	    } catch (Exception e) {
-    	        System.err.println(e.toString());
-    	    }
+       try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c:\\doc\\student8.txt"))) {
+            List<stuVO> loadedUsers = (List<stuVO>) ois.readObject();   // 파일 읽어온거 loadedUser에 저장
+            List<stuVO> uniqueUsers = getUser(loadedUsers);
+            // 먼저 생성한 객체에 중복 검사용으로 넣어둠 -> 검증 후 uniqueUsers에 대입
+            for (stuVO vo : uniqueUsers) {
+                System.out.println(vo.toString());
+            }
+        } catch (EOFException e) {   // 파일 끝까지 읽기
+            System.out.println("데이터를 모두 읽었습니다.");
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
     }
 
     public void Quit() {
-    	try {
-        	FileOutputStream fos = new  FileOutputStream("c:\\doc\\student8.txt");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
+       try {
+           FileOutputStream fos = new  FileOutputStream("c:\\doc\\student8.txt");
+         ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(getUser(user));
             System.out.println("데이터 저장 완료!");
 
@@ -80,5 +88,5 @@ public class stuFunc implements Serializable {
         }
     }
 
-	
+   
 }
